@@ -1,5 +1,5 @@
 package Objects;
-
+import java.awt.*;
 
 
 public class Planet {
@@ -12,8 +12,10 @@ public class Planet {
     //velocity is in units of km/s, position is in units of AU
     public double vx;
     public double vy;
-    public Planet(String name, double mass, double radius, double x, double y, double vx, double vy) {
+    public Color color;
+    public Planet(String name, Color color, double mass, double radius, double x, double y, double vx, double vy) {
         this.name = name;
+        this.color = color;
         this.mass = mass;
         this.radius = radius;
         this.x = x;
@@ -26,6 +28,9 @@ public class Planet {
     }
     public double getMass() {
         return mass;
+    }
+    public Color getColor() {
+        return color;
     }
 
     public String getName() {

@@ -1,5 +1,7 @@
-import utilities.Planet;
-
+import Objects.Planet;
+import Render.SimPanel;
+import java.util.ArrayList;
+import javax.swing.*;
 public class Main {
     public static void main(String[] args) {
         System.out.println("Program started.");
@@ -12,5 +14,22 @@ public class Main {
         Planet uranus = new Planet("Uranus", 8.681e25, 25362, -17.8, -6.1, 2, -5.8);
         Planet neptune = new Planet("Neptune", 1.024e26, 24622, 28.6, -9.5, 1.4, 3.4);
         Planet sun = new Planet("Sun", 1.989e30, 696340, 0, 0, 0, 0);
+        ArrayList<Planet> planets = new ArrayList<>();
+        planets.add(mercury);
+        planets.add(venus);
+        planets.add(earth);
+        planets.add(mars);
+        planets.add(jupiter);
+        planets.add(saturn);
+        planets.add(uranus);
+        planets.add(neptune);
+        planets.add(sun);
+        JFrame frame = new JFrame("Solar System");
+SimPanel panel = new SimPanel(planets);
+frame.add(panel);
+frame.setSize(800, 800);
+frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+frame.setVisible(true);
+
     }
 }

@@ -1,14 +1,16 @@
-package Objects;
+package utilities;
+
 
 public class Planet {
     String name;
     double mass;
     double radius;
-    double x;
-    double y;
+   public double x;
+   public double y;
     //position (x,y) and velocity (vx,vy) of the planet
-    double vx;
-    double vy;
+    //velocity is in units of km/s, position is in units of AU
+    public double vx;
+    public double vy;
     public Planet(String name, double mass, double radius, double x, double y, double vx, double vy) {
         this.name = name;
         this.mass = mass;

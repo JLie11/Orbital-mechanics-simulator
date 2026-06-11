@@ -11,15 +11,19 @@ for (int i = 0; i < planets.size(); i++){
         double dx = p2.getX() - p1.getX();
         double dy = p2.getY() - p1.getY();
         double r = Math.hypot(dx, dy);
-        double softening = 1e9; // 1 million km buffer
-        double gravForce = G * p1.getMass() * p2.getMass() / (r * r + softening * softening);
-        double a = gravForce / p1.getMass(); 
-        double ax = a * (dx/r);
-        double ay = a * (dy/r);
-        p1.vx += ax * dt;
-        p1.vy += ay * dt;
-        p2.vx -= ax * dt;
-        p2.vy -= ay * dt;
+        /*double softening = 1e9; // 1 million km buffer
+        double gravForce = G * p1.getMass() * p2.getMass() / (r * r + softening * softening);*/
+         double gravForce = G * p1.getMass() * p2.getMass() / (r * r);
+        double a1 = gravForce / p1.getMass(); 
+        double a2 = gravForce / p2.getMass();
+        double ax1 = a1 * (dx/r);
+        double ay1 = a1 * (dy/r);
+        double ax2 = a2 * (dx/r);
+        double ay2 = a2 * (dy/r);
+        p1.vx += ax1 * dt;
+        p1.vy += ay1 * dt;
+        p2.vx -= ax2 * dt;
+        p2.vy -= ay2 * dt;
        
 }}}
 public void movePlanets(ArrayList<Planet> planets,double dt){

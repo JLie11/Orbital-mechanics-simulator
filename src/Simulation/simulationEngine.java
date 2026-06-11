@@ -25,7 +25,7 @@ for (int i = 0; i < planets.size(); i++){
        
 }}}
 public void movePlanets(ArrayList<Planet> planets,double dt){
-        for(int n = 0; n <= 8; n++){
+      for(int n = 0; n < planets.size(); n++){
             Planet p1 = planets.get(n);
             p1.x += p1.vx * dt;
             p1.y += p1.vy * dt;

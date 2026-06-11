@@ -3,9 +3,8 @@ import java.awt.*;
 
 
 public class Planet {
-    String name;
-    double mass;
-    double radius;
+    public String name;
+    public double mass;
    public double x;
    public double y;
     //position (x,y) and velocity (vx,vy) of the planet
@@ -13,11 +12,10 @@ public class Planet {
     public double vx;
     public double vy;
     public Color color;
-    public Planet(String name, Color color, double mass, double radius, double x, double y, double vx, double vy) {
+    public Planet(String name, Color color, double mass, double x, double y, double vx, double vy) {
         this.name = name;
         this.color = color;
         this.mass = mass;
-        this.radius = radius;
         this.x = x;
         this.y = y;
         this.vx = vx;
@@ -35,10 +33,6 @@ public class Planet {
 
     public String getName() {
         return name;
-    }
-
-    public double getRadius() {
-        return radius;
     }
 
     public double getVx() {

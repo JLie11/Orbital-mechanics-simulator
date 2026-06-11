@@ -36,9 +36,9 @@ frame.setVisible(true);
     while (running == true) {
         for (int b = 0; b<100; b++){
             //dt is speed, the higher the faster it is
-        engine.applyGravity(planets, 6000);
-        engine.movePlanets(planets, 6000);
-    }
+        engine.applyGravity(planets, 3000);
+        engine.movePlanets(planets, 3000);
+        }
         panel.repaint();
         Thread.sleep(16);
     }
@@ -47,4 +47,5 @@ frame.setVisible(true);
     }
 
 
-    }
+}
+

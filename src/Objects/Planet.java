@@ -9,7 +9,7 @@ public class Planet {
    public double x;
    public double y;
     //position (x,y) and velocity (vx,vy) of the planet
-    //velocity is in units of km/s, position is in units of AU
+    //velocity is in units of km/s, position is in units of km from the sun
     public double vx;
     public double vy;
     public Color color;
@@ -22,9 +22,9 @@ public class Planet {
         this.y = y;
         this.vx = vx;
         this.vy = vy;
-    }
-    public double density(){
-        return mass / (4.0/3.0 * Math.PI * Math.pow(radius, 3));
+
+    
+    
     }
     public double getMass() {
         return mass;

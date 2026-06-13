@@ -31,11 +31,10 @@ Planet sun = new Planet("Sun", Color.yellow, 1.989e30, 0, 0, 0, 0);
     System.out.println("Would you like to add a planet? (Y/N)");
     String answer = scanner.nextLine();
     if (answer.equalsIgnoreCase("y")) {
-        System.out.println("Would you like high mass (Sun), Medium mass (Earth) , or Low mass (Mercury)? (H/M/L");
+        System.out.println("Would you like high mass (Sun), Medium mass (Earth) , or Low mass (Mercury)? (H/M/L)");
        String massX = scanner.nextLine();
             double massY = 0;
             if (!massX.equalsIgnoreCase("H")&&
-                !massX.equalsIgnoreCase("m")&&
                 !massX.equalsIgnoreCase("L")){
                     while (!massX.equalsIgnoreCase("H")&&
                     !massX.equalsIgnoreCase("m")&&
@@ -43,20 +42,23 @@ Planet sun = new Planet("Sun", Color.yellow, 1.989e30, 0, 0, 0, 0);
                         System.out.println("Please try again (H/M/L)");
                         massX = scanner.nextLine();
                 }
+            }
             if (massX.equalsIgnoreCase("H")){
-                massY = sun.getMass();
+                massY = 1.989e30;
             }
             if (massX.equalsIgnoreCase("M")){
-                massY = earth.getMass();
+                massY = 5.972e24;
             }
             if (massX.equalsIgnoreCase("L")){
-                massY = mercury.getMass();
+                massY = 3.285e23;
             }
-            System.out.println("Planet Created");
-
-            Planet userPlanet = new Planet("X", Color.black, massY ,-2.137e12, 0, 0, 35000 );
+           
+            
+             System.out.println("Planet Created");
+            System.out.println(massY);
+            Planet userPlanet = new Planet("X", Color.black, massY ,-5.8362e11, 0, 0, 6000 );
             planets.add(userPlanet);
-                }   }
+         }
                 System.out.println(String.valueOf(planets.size()));
                 
     
